@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Site homepage; introduction video.">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Joseph Tassone">
+    <title>Joe Tassone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!--Body positions it's primary children (header, nav, main, footer) using flex-box -->
+<body id="flex-container">
+    
+    <!--Positioned at the top of the body, has no content and has an image background-->
+    <header class="flex-item" id="header"></header>
+    
+    <!--Nav has the links to other internal pages, positions links with flexbox-->
+    <nav class="flex-item" id="nav">
+         <ul>
+            <li><a class="currentPage" href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="Works.html">Works</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Canvas.html">Canvas</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!--Positions primary children (two asides and section) using flexbox, background is a gradiant-->
+    <main class="flex-item" id="main">
+        
+        <!--Left aside holds a personal image and a brief description-->
+        <aside class="adjust">
+            <div id="aside2">
+                <div>
+                    <h1 id="name">Joseph Tassone</h1>
+                    <p class="atext">Programmer, Developer, Writer</p>
+                </div>
+                <img id="circle" alt="Pofile" src="img/Profile.jpg" width="200px" height="200px"> 
+                <p class="atext">Thank you for visiting my site!</p>
+            </div>
+        </aside>
+        
+        <!--Holds the video tag which has a brief introductory video to the site-->
+        <section class="adjust">
+            <video width="600" height="500" controls>
+            <source src="video/Introduction.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </section>
+        
+        <!--Right aside holds the social media links and twitter feed-->
+        <aside class="adjust">
+             <div id="aside1">
+                 
+               <!--Div holds the social media links (picture icons)-->
+               <div id="socialMedia">
+                    <a href="https://www.facebook.com/Tasswon" target="_blank">
+                        <img alt="Facebook" src="img/facebook.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://www.instagram.com/tasswon/" target="_blank">
+                        <img alt="Instagram" src="img/instagram.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://plus.google.com/u/0/115011875366686783417" target="_blank">
+                        <img alt="Google+" src="img/google.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCz3eYHK84Izwr7LmBW_9aHQ"  target="_blank">
+                        <img alt="Youtube" src="img/youtube.png" width="85" height="85"> 
+                    </a> 
+                </div>
+                 
+                 <!--Div holds the twitter feed-->
+                <div id="twitter">
+                    <a class="twitter-timeline" href="https://twitter.com/Tasswon">Tweets by Tasswon</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+    
+    <!--Footer is at the bottom of the page and has the copyright and an updating current date (divs seperated using flexbox)-->
+    <footer class="flex-item" id="footer">
+        <div class="text"> 
+            Joseph Tassone &copy 2016
+        </div>
+        <div class="text" id="date"> Placeholder </div>
+    </footer>
+    
+    <!--A specialized widget which is linked directly to twitter (built on their end)-->
+    <script async src="https://platform.twitter.com/widgets.js"></script>
+    
+    <!--Updates the content of the "date" id div in the footer to hold the current date-->
+    <script>
+        document.getElementById("date").innerHTML = Date();           
+    </script>
+</body>
+</html>

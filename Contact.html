@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Has a PHP contact form, as well as general contact details">
+    <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
+    <meta name="author" content="Joseph Tassone">
+    <title>Joe Tassone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+    
+<!--Body positions it's primary children (header, nav, main, footer) using flex-box -->
+<body id="flex-container">
+    
+    <!--Positioned at the top of the body, has no content and has an image background-->
+    <header class="flex-item" id="header"></header>
+    
+    <!--Nav has the links to other internal pages, positions links with flexbox-->
+    <nav class="flex-item" id="nav">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="Works.html">Works</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Canvas.html">Canvas</a></li>
+            <li><a href="Contact.html" class="currentPage">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!--Positions primary children (two section) using flexbox, background is a gradiant-->
+    <main id="main2">
+        
+        <!--Left section holds the php contact form-->
+        <section id="contact" class="adjust">
+            <form action="mail.php" method="post">
+                <h1 class="atext" id="textMod">Send a Message or Follow Me on Social Media!</h1> <br>
+                <p class="atext">Number: (705)254-8389</p>
+                
+                <!--In case the contact form doesn't work, use the email link-->
+                <p class="atext">Contact Me: <a href="mailto:joetasswon@msn.com">joetasswon@msn.com</a></p>
+                <p class="atext">Name: </p> 
+                <input class="input" type="text" name="name">
+                <p class="atext">Email: </p> 
+                <input class="input" type="text" name="email">
+                <p class="atext">Message: </p> 
+                <textarea class="input" name="message" rows="20"  ></textarea><br />
+                <input type="submit" value="Submit"><input type="reset" value="Clear">
+            </form>
+        </section>
+        
+        <!--Right section holds the social media links and twitter feed-->
+        <section class="adjust" id="div">
+             <div id="aside1">
+                 
+               <!--Div holds the social media links (picture icons)-->
+               <div id="socialMedia">
+                    <a href="https://www.facebook.com/Tasswon" target="_blank">
+                        <img alt="Facebook" src="img/facebook.png" width="85" height="85">
+                    </a>
+                    <a href="https://www.instagram.com/tasswon/" target="_blank">
+                        <img alt="Instagram" src="img/instagram.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://plus.google.com/u/0/115011875366686783417" target="_blank">
+                        <img alt="Google+" src="img/google.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCz3eYHK84Izwr7LmBW_9aHQ"  target="_blank">
+                        <img alt="Youtube" src="img/youtube.png" width="85" height="85"> 
+                    </a> 
+                </div>
+                 
+                <!--Div holds the twitter feed-->
+                <div id="twitter">
+                    <a class="twitter-timeline" href="https://twitter.com/Tasswon">Tweets by Tasswon</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!--Footer is at the bottom of the page and has the copyright and an updating current date (divs seperated using flexbox)-->
+    <footer class="flex-item" id="footer">
+        <div class="text"> 
+            Joseph Tassone &copy 2016
+        </div>
+        <div class="text" id="date"> Placeholder </div>
+    </footer>
+    
+    <!--A specialized widget which is linked directly to twitter (built on their end)-->
+    <script async src="https://platform.twitter.com/widgets.js"></script>
+    
+    <!--Updates the content of the "date" id div in the footer to hold the current date-->
+    <script>
+        document.getElementById("date").innerHTML = Date();           
+    </script>
+</body>
+</html>

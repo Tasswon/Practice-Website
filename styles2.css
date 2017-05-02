@@ -1,0 +1,279 @@
+/* hides the aside on the resume page */
+aside {
+    display:none;
+}
+
+/* sets the table header font for the resume page */
+th {
+    font-size:40px;
+    text-align: left;
+    color:black;
+}
+
+/* sets the table data font for the resume page */
+td {
+    color:black;
+    font-size: 25px;
+}
+
+/* sets the background color and data positioning for the table container in the resume page */
+table {
+    background-color:white;
+    border-radius: 2%;
+    position:relative;
+    top: 10px;
+    left:10px;
+    box-shadow: 5px 5px 5px 3px black;
+    border-spacing:inherit;
+}
+
+/* modiefies the size of the input boxes in the form of the contact page */
+.input {
+    width: 800px;
+    resize:none;
+}
+
+/* modifies the text and background color of the reveal social media td in the resume page */
+#displayText {
+    background-color:cornflowerblue;
+    border-color:black;
+    border-width:2px;
+    border-style:solid;
+}
+
+/* modifies the section tag of the contact page to have a specific color, size, and position items using row flex-box */
+#contact {
+    background-color:white;
+    width: 850px;
+    height:600px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: -webkit-row;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px 3px black;
+}
+
+/* modifies the section tag of the about page to have a specific color, size, and position items using row flex-box */
+#about {
+    background-color:white;
+    width: 850px;
+    height:600px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: -webkit-column;
+    flex-direction:column;
+    align-self: center;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px 3px black;
+    padding-left: 5px;
+    padding-top: 10px;
+    overflow:auto;
+}
+
+/* fixes the padding between items in the section tag of the about page */
+.paddingFix {
+    padding-bottom: 20px;
+}
+
+/* resets the main tag of the about, contact, and blog pages to better match the content of the page */
+#main2 {
+    height: 650px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content:space-around;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(blue, darkblue, black); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(blue, darkblue, black); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(blue, darkblue, black); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(blue, darkblueblue, #00004d); /* Standard syntax */
+    overflow: auto;
+}
+
+/* modifies the maint tag of the works page to better match the content of the page */
+#main3 {
+    height: 650px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content:space-between;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(blue, darkblue, black); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(blue, darkblue, black); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(blue, darkblue, black); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(blue, darkblueblue, #00004d); /* Standard syntax */
+    overflow: auto;
+}
+
+/* turns the profile picture in the about page and images in the works page into a circle */
+.normalCircle {
+    -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+/* adds a shadow around the border of the images in the works page */
+.circleBorder {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px 5px 3px black;
+    margin-bottom: 20px;
+}
+
+/* modifies the section tag of the about page to have a specific color, size, and position items using column flex-box */
+#works {
+    width: 400px;
+    height:1000px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: -webkit-column;
+    flex-direction:column;
+    padding:20px;
+}
+
+/* positions the tooltips next to the work images in the works page */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* hides the tooltips by default and sets properties of them in the works page */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5%;
+    padding: 5px;
+    position: absolute;
+    top: 40%;
+    left:65%;
+    z-index: 1;
+}
+
+/* on hover the tooltip in the works page becomes visible */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* intitial positioning, hiding, and sizing for the modal in the works section */
+.modal {
+    position:relative;
+    left:20%;
+    position:fixed;
+    display: none;
+    width: 50%; 
+    height: 400px;
+    overflow: auto;
+    z-index: 0;
+}
+
+/* sets the positioning of the modal content and sets the animation timing */
+.modalContent {
+    position: relative;
+    left:auto;
+    background-color: white;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* sets how the modal's animation performs (what happens) */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* sets the color of the modal's header and positioning of text */
+.modalHeader {
+    padding: 3px 15px;
+    background-color: black;
+    color: white;
+}
+
+/* fixes the padding the modal's content */
+.modalBody {
+    padding: 5px;
+}
+
+/* sets the transition time for the images in the works page */
+.workChange {
+    -webkit-transition: width 1s;
+    transition: width 1s;
+}
+
+/* causes the animation to occur on a hover over the work images in the works page */
+img.workChange:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    height 210px;
+    width: 210px;
+}
+
+/* modifies the section tag of the blog page to have a specific  size and position items using column flex-box */
+#blog {
+    align-items: center;
+    width: 50%;
+    overflow:auto;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+/* sets the size of the blog post and sets the animation time */
+.post {
+    width: 100%;
+    margin: 10px;
+    -webkit-transition: height 4s; /* For Safari 3.1 to 6.0 */
+    transition: height 4s;
+    height: 60px;
+    overflow:hidden;
+    color:transparent;
+}
+
+/* sets the blog post header properties */
+.postHeader {
+    background-color:black;
+    color: white;
+    height: 60px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+/* sets the initial height of the blog post content to 0 */
+.postBody {
+    height:0px;
+}
+
+/* reveals the article section of the blog post on hover */
+article.post:hover{
+    height: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color:white;
+    color: black;
+    overflow:auto;
+}
+
+/* fixes the text wrapping issues on all pre tags */
+pre{
+    white-space: pre-wrap;
+}
+
+/* box holds the instructions and the reset button */
+#instructions {
+    margin-bottom: 10px;
+    padding: 5px;
+    height: 125px;
+    width:300px;
+    background:white;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px 2px black;
+    overflow:auto;
+}

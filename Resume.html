@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Brief resume on the page, and has a downloadable resume with further information">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Joseph Tassone">
+    <title>Joe Tassone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+    
+<!--Body positions it's primary children (header, nav, main, footer) using flex-box -->
+<body id="flex-container">
+    
+    <!--Positioned at the top of the body, has no content and has an image background-->
+    <header class="flex-item" id="header"></header>
+    
+    <!--Nav has the links to other internal pages, positions links with flexbox-->
+    <nav class="flex-item" id="nav">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a class="currentPage" href="Resume.html">Resume</a></li>
+            <li><a href="Works.html">Works</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Canvas.html">Canvas</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!--Positions primary children (aside and section) using flexbox, background is a gradiant-->
+    <main class="flex-item" id="main">
+        <section>
+            
+            <!--Left table held within a section tag, makes up the resume-->
+            <table>
+                <tr>
+                    <th>Highlight of Skills and Qualifications:</th>
+                </tr>
+                <tr>
+                    <td>Strong communication skills</td> 
+                    <td>Experience in Java Programming</td>
+                </tr>
+                <tr>
+                    <td>Reliable and dependable</td>
+                    <td>Experience in C++/C Programming</td>
+                </tr>
+                <tr>
+                    <td>Proactive Problem Solver</td>
+                    <td>Experience in SQL/Database Programming</td>
+                </tr>
+                <tr>
+                    <td>Team Oriented</td>
+                    <td>Experience in HTML, Javascript, and CSS</td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <th>Education</th>
+                </tr>   
+                <tr>
+                    <td>Bachelor of Arts in English, Minor in Business</td>
+                </tr>
+                <tr>
+                    <td>Bachelor of Arts in Computer Science</td>
+                </tr>
+                
+                 <tr>
+                    <td>Work Placement Certificate</td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <th>Work Experience</th>
+                </tr>
+                <tr>
+                    <td>Customer Service Representative: </td>
+                    <td>TD Canada Trust</td>
+                </tr>
+                <tr>
+                    <td>IT Support Assistant: </td>
+                    <td>Algoma University</td>
+                </tr>
+                <tr>
+                    <td>Theatre Technician:</td>
+                    <td>Algoma District School Board</td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    
+                    <!--Clicking here brings up the social media aside-->
+                    <td id="displayText" onClick="show('div')" >Click here to bring up Social Media!</td>
+                </tr>
+                
+                <!--Clicking this downloads the resume doc file-->
+                <tr>
+                    <td>Download Full Resume: <a href="files/Joseph%20Tassone%20Resume.docx" target="_blank">Download Link</a></td>
+                </tr>
+            </table>
+        </section>
+        
+        <!--Right aside holds the social media links and twitter feed-->
+        <aside class="adjust" id="div">
+             <div id="aside1">
+               
+               <!--Div holds the social media links (picture icons)-->
+               <div id="socialMedia">
+                    <a href="https://www.facebook.com/Tasswon" target="_blank">
+                        <img alt="Facebook" src="img/facebook.png" width="85" height="85">
+                    </a>
+                    <a href="https://www.instagram.com/tasswon/" target="_blank">
+                        <img alt="Instagram" src="img/instagram.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://plus.google.com/u/0/115011875366686783417" target="_blank">
+                        <img alt="Google+" src="img/google.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCz3eYHK84Izwr7LmBW_9aHQ"  target="_blank">
+                        <img alt="Youtube" src="img/youtube.png" width="85" height="85"> 
+                    </a> 
+                </div>
+                 
+                <!--Div holds the twitter feed-->
+                <div id="twitter">
+                    <a class="twitter-timeline" href="https://twitter.com/Tasswon">Tweets by Tasswon</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+    
+    <!--Footer is at the bottom of the page and has the copyright and an updating current date (divs seperated using flexbox)-->
+    <footer class="flex-item" id="footer">
+        <div class="text"> 
+            Joseph Tassone &copy 2016
+        </div>
+        <div class="text" id="date"> Placeholder </div>
+    </footer>
+    
+    <!--A specialized widget which is linked directly to twitter (built on their end)-->
+    <script>
+        document.getElementById("date").innerHTML = Date();           
+    </script>
+    
+    <!--Updates the content of the "date" id div in the footer to hold the current date-->
+    <script async src="https://platform.twitter.com/widgets.js"></script>
+    
+    <!--On click the social media aside is revealed (modifies the style attribute of the aside)-->
+    <script>
+        function show(id) {      
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</body>
+</html>

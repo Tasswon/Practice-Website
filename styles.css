@@ -1,0 +1,186 @@
+/* Resets the margins and sizing properties of the pages prior to any other CSS loading */
+* {
+    margin:0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* Used by the body, and sets it so that it's the primary container for the flex-items within it (positioning purposes), and sets default background color to black */
+#flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: -webkit-column;
+    flex-direction:column;
+    background-color:black;
+    width:100%;
+    height:100%;
+}
+
+/* Sets the body's children to all have a maximum width (based on page size), and also semantically shows that they are flex-items to the body */
+.flex-item {
+    width: 100%;
+}
+
+/* Sets the height of the header and the background image */
+#header {
+    height: 200px;
+    background-image: url("img/banner.jpg");
+}
+
+/* Sets the height of the nav bar, colors it, and positions the items inside based on flex-box */
+#nav {
+    height: 50px;
+    background:#000033;
+    display: -webkit-flex;
+    display: flex;
+    align-items:center;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+/* Sets the height of the main, colors it using a gradient, and positions the items inside based on flex-box (spaces the content) */
+#main {
+    height: 650px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content:space-between;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(blue, darkblue, black); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(blue, darkblue, black); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(blue, darkblue, black); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(blue, darkblueblue, #00004d); /* Standard syntax */
+    overflow:auto;
+}
+
+/* Sets the height of the footer, and uses flexbox to position the items centrally and with a space between them */
+#footer {
+    height: 70px;
+    display: -webkit-flex;
+    display: flex;
+    align-items:center;
+    justify-content:space-between; 
+}
+
+/* Used by the nav bar "listed" link items to eliminate any style properties ("-") and center them in the nav box */
+ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+/* Ensures the listed nav links align side-by-side */
+li {
+    float:left;
+}
+
+/* Sets the font color, style, and position of the nav links */
+li a {
+    color: whitesmoke;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight:bold;
+    text-align: center;
+    padding: 16px 28px;
+    text-decoration: none;
+}
+
+/* Sets the box and link color when the mouse is hovered over them in the nav bar */
+li a:hover:not(.active) {
+    background-color: lightblue;
+}
+
+/* Sets the color of the currently visited page on the nav bar */
+.currentPage {
+    background-color: dodgerblue;
+}
+
+/* Used by the right aside (social media box), sets the background to white to match the twitter feed, and positions items using column flex-box */
+#aside1 {
+    background:white;
+    width:400px;
+    height:575px;
+    border-radius: 5%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: -webkit-column;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* Sets the overlow on the twitter feed to scroll */
+#twitter {
+    overflow:scroll;
+}
+
+/* Used by the left aside, sets the background to white, positions items using column flex-box, and adds shadowing */
+#aside2 {
+    background:white;
+    width:400px;
+    height:575px;
+    border-radius: 5%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: -webkit-column;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    overflow:hidden;
+    border-style:solid;
+    border-width: 1px;
+    border-color:black;
+    box-shadow: 5px 5px 5px 3px black;
+}
+
+/* fixes the positioning in the main to center all divs and other items */
+.adjust {
+    -webkit-align-self: center; /* Safari 7.0+ */
+    align-self: center;
+    margin:20px;
+}
+
+/* sets the text color and font style for the footer */
+.text {
+    color:whitesmoke;
+    font-weight: bold;
+    font-size:20px
+}
+
+/* used by the right, main aside for the name text */
+#name {
+    color:black;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+/* modifies the text font in the asides  */
+.atext {
+    color:black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* turns the profile picture into a circle and sets the transition for the animation */
+#circle {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+    -webkit-transition: width 3s, height 3s, -webkit-transform 3s; /* Safari */
+    transition: width 3s, height 3s, transform 3s;
+}
+
+/* on hover the circle profile picture performs this animation */
+#circle:hover {
+    width: 300px;
+    height: 300px;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}
+
+/* modifies the text in the contact page */
+#textMod {
+    font-size: 30px;
+}
+
+
+
+

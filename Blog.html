@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Has blog posts containing various thoughts and commented topics">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Joseph Tassone">
+    <title>Joe Tassone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+    
+<!--Body positions it's primary children (header, nav, main, footer) using flex-box -->
+<body id="flex-container">
+    
+    <!--Positioned at the top of the body, has no content and has an image background-->
+    <header class="flex-item" id="header"></header>
+    
+    <!--Nav has the links to other internal pages, positions links with flexbox-->
+    <nav class="flex-item" id="nav">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="Works.html">Works</a></li>
+            <li><a href="Blog.html" class="currentPage">Blog</a></li>
+            <li><a href="Canvas.html">Canvas</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!--Centers section tag (holds the blog posts)-->
+    <main id="main2">
+        <section id="blog">
+            
+            <!--Each article tag is a blog post (made up of two divs)-->
+            <article id="content1" class="post">
+                
+                <!--Header of the blog post-->
+                <div class="postHeader">
+                    <h1>The Future of Mass Effect</h1>
+                    <p>Date: September 20th, 2016</p>
+                </div>
+                
+                <!--Body of the post-->
+                <div class="postBody"> 
+                    
+                    <!--Clicking here downloads the blog post content-->
+                    <p id="click1">Click here to download the text!</p>
+                    <pre>
+                    
+By: Joseph Tassone
+
+Last year at E3 BioWare confirmed that they are currently working on a new edition to the Mass Effect franchise. News of the game has been sketchy at best, however with the successful release of Dragon Age: Inquisition in November many expect the company to be moving full force on development. Most of what is known so far is limited to concept art, mixed in with a few hints from individuals involved. As a result, the obvious question on everyone’s mind is what the future holds for the series?
+This question is difficult to answer and one should justifiably fear the idea of the repetitive embodiment that has befallen games like Assassins Creed. Even with the backlash against the ending of Mass Effect 3, the series is still known for its replay value and universal critical acclaim. It’s not difficult to see why as the narrative follows a perfect journey beginning with the hero’s rise (Mass Effect), followed by the hero’s fall (Mass Effect 2), and ending with the hero’s sacrifice (Mass Effect 3). There’s really no continuation after this style of storytelling as the hero’s journey has come full circle. This combined with the fact that gameplay improved drastically across proceeding editions and included the save content transfer system that BioWare has become famous for, created a very interactive experience.
+
+With the company’s confirmation that the Commander Shepard storyline is finished it seems possible that a reboot is being considered. Former community manager Chris Priestly stated on the company’s forums, 
+
+“The game does not have to come after. Or before. Or off to the side. Or with characters you know. Or yaddayaddayadda."
+
+One should take the statement with a grain of salt as Priestly was removed from the organization earlier last year. That being said, many developers including Lead Writer, Chris Schlerf, have been similarly hinting at such ideas since the game’s announcement. The problem is that some argue that reboot should only be considered if a series is dated or went the way of Tomb Raider; having virtually no innovation across eight games. Neither scenario has happened (yet) to Mass Effect, so the other situation could be that the series is simply progressing into a new future storyline.
+One does wonder what could possibly be a greater threat than the Reapers (the god-like machine race from the previous games) and how a storyline could compete with an entire galactic war. Perhaps a more subtle touch will be taken, however BioWare isn’t known for their subtlety (i.e. the drastic gameplay changes in Dragon Age 2). In a sense, it does feel like the developers are attempting to end on a high note by making up for the disappointment of the last game’s finale. Hopefully this isn’t the mindset as it would be frustrating to see the degrading of a well-respected title. 
+
+All this being said the company seems to be taking fan commentary seriously. Bioware’s Creative Director Mac Walters posted to twitter last week,
+
+“Spring-Forward Poll: What new feature, system or gameplay would you add to the next #MassEffect ?” 
+
+Fan commentary was numerous and Walters actually seemed to take an interest by responding to certain ideas. These ranged from creating full biotic characters to just simply including more hair styles. One obviously wonders how much actually is taken into consideration, but regardless it’s good to at least see the company interacting with fans. 
+
+Overall, do we need another Mass Effect game? Depending on the route, the answer is at best a skeptical yes, though perhaps BioWare should move on to a new series. 
+ 
+</pre>
+                </div>
+            </article>
+            
+            <!--Another blog post (Same as above)-->
+            <article id="content2" class="post">
+                <div class="postHeader">
+                    <h1>Things Needed for Novel Writing</h1>
+                    <p>Date: September 20th, 2016</p>
+                </div>
+                <div class="postBody"> 
+                    <p id="click2">Click here to download the text!</p>
+                    <pre>
+                    
+Things Needed for Novel
+1)	Characters
+    a.	Who is the story about? (the thief)
+        i.	Are they good or bad?
+        ii.	Where does their story begin?
+        iii.	What makes them so important?
+    b.	Who else is in the story: the secondary characters
+    c.	What the people and races of the world
+        i.	What culture are they inspired by
+        ii.	Do they speak a different language?
+        iii.	What the relations between races?
+        iv.	How are they governed?
+2)	Setting
+    a.	Where does the story take place? (in the neutral land)
+    b.	What’s the time period?
+    c.	What are the other nations
+        i.	What nations are they inspired by
+        ii.	What is the state of these nations?
+        iii.	What is the climate and development of these nations?
+            1.	Desert, mountains, planes, forest, etc
+        iv.	Where are the cities and how developed are these nations?
+3)	Plot
+    a.	What is the situation of the world
+    b.	Where does the drama come from?
+    c.	Use snowflake method once other parts are done
+                    </pre>
+                </div>
+            </article>
+            
+        </section>
+    </main>
+    
+    <!--Footer is at the bottom of the page and has the copyright and an updating current date (divs seperated using flexbox)-->
+    <footer class="flex-item" id="footer">
+        <div class="text"> 
+            Joseph Tassone &copy 2016
+        </div>
+        <div class="text" id="date"> Placeholder </div>
+    </footer>
+    
+    <!--Updates the content of the "date" id div in the footer to hold the current date-->
+    <script>
+        document.getElementById("date").innerHTML = Date();           
+    </script>
+    
+    <!--Used to download the post content-->
+    <script>
+        //Used by the first post to download the content, calls function
+        var post1 = document.getElementById("content1"); 
+        //downloads post on click
+        document.getElementById("click1").onclick = function() {download(post1)};
+        
+        //Used by the second post to download the content, calls function
+        var post2 = document.getElementById("content2"); 
+        //downloads post on click
+        document.getElementById("click2").onclick = function() {download(post2)};
+        
+        //Function downloads the content of the blog post
+        function download(post){
+            var text = document.body.appendChild(document.createElement("a"));
+            //saves the post as an html file
+            text.download = "BlogPost.html";
+            text.href = "data:text/html," + post.innerHTML; 
+            text.click();
+        }
+    </script>
+</body>
+</html>

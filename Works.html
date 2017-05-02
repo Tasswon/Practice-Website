@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A collection of code segments and written pieces">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Joseph Tassone">
+    <title>Joe Tassone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+    
+<!--Body positions it's primary children (header, nav, main, footer) using flex-box -->
+<body id="flex-container">
+    
+    <!--Positioned at the top of the body, has no content and has an image background-->
+    <header class="flex-item" id="header"></header>
+    
+    <!--Nav has the links to other internal pages, positions links with flexbox-->
+    <nav class="flex-item" id="nav">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="Works.html" class="currentPage">Works</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Canvas.html">Canvas</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!--Positions primary children (three sections) using flexbox, background is a gradiant-->
+    <main id="main3">
+        
+        <!--Left section breaks up the work icons and positions them by column fle-box-->
+        <section id="works">
+            
+            <!--Each tooltip div hold an work icon image and an span tooltip (Maclean's Magazine Article)-->
+            <div class="tooltip">
+                <!--Image icon for a specific work, and call modal when clicked-->
+                <img id="click1" class="normalCircle circleBorder workChange" alt="Article" src="img/macleans.jpg" width="200px" height="200px">
+                <!--Tooltip (description) placed beside work icon image-->
+                <span class="tooltiptext">MACLEAN'S MAGAZINE ARTICLE</span>
+            </div>
+            
+            <!--Same as above (AVL Tree)-->
+            <div class="tooltip">
+                <img id="click2" class="normalCircle circleBorder workChange" alt="Tree" src="img/tree.jpg" width="200px" height="200px">
+                <span class="tooltiptext">AVL TREE</span>
+            </div>
+            
+            <!--Same as above (Hash Table)-->
+            <div class="tooltip">
+                <img id="click3" class="normalCircle circleBorder workChange" alt="Hashtable" src="img/table.JPG" width="200px" height="200px">
+                <span class="tooltiptext">HASHTABLE</span>
+            </div>
+            
+            <!--Same as above (Threading)-->
+            <div class="tooltip">
+                <img id="click4" class="normalCircle circleBorder workChange" alt="Threading" src="img/Thread.jpg" width="200px" height="200px">
+                <span class="tooltiptext">THREADING</span>
+            </div>
+        </section>
+        
+        <!--Holds all the modals for the works-->
+        <section>
+            
+            <!--Same as above (Macleanès Magazine Article)-->
+            <div id="newModal1" class="modal">
+                <!--Holds header and paragraph of modal-->
+                <div class="modalContent">
+                    <div class="modalHeader">
+                        <h1>MACLEAN'S MAGAZINE ARTICLE</h1>
+                    </div>
+                    <div class=modalBody>
+                        <pre>
+                        By: Joseph Tassone
+MAIN
+When I first envisioned university I pictured a prestigious academy where the undeveloped entered and the great left. However, this picture was nullified when I self-diagnosed my indecisiveness with which many applicants are plagued. The symptoms of indecisiveness of many university students are: 1) not having a clue what you want to do with your life and 2) worrying you will just waste time. This was definitely my mindset going into Algoma University but after almost four years of attendance, I must admit that it lives up to its tag line “small university, big education”. No, you won’t find over the top frat parties, but you will gain something far more in the long run. Rather than being student number 109667890 you will be [insert name].  To quote immortal words from the long running sitcom Cheers, “It’s a place where everybody knows your name”. You’ll make close friendships that will last a life time, have one-on-one time with professors, and most importantly, will actually be able to speak your mind. You are not a tiny voice in a class of five hundred.  
+
+EXTRAS
+Algoma University represents the multicultural melting pot that is Canada. An amazing student exchange program exposes you to many different peoples and offers the potential to study abroad. Cultural Days offer the opportunity to try some of the strangest foods ever conceived and pub nights are an excellent way to start long lasting friendships. The university’s local bar, The Speak Easy, has some of the cheapest drinks in town and constantly offers student entertainment. However, the most advantageous part of Algoma U is the fact that there is room to grow. If you feel something is missing then start a club and leave your legacy. Believe me: our Student Union always welcomes the next great idea.
+
+CITY VIBE
+A friend of mine crossing the international bridge into Canada joked that Sault Ste. Marie seemed to have an identity crisis. One side displays a shimmering waterway guiding itself to a beautifully designed urban center and the other looks like Mordor from J.R.R Tolkien’s Lord of the Rings. I suggest that you look beyond the industry to all that the area offers. We are surrounded by a number of natural parks, trails, three Great Lakes, and unlimited wilderness. The city of Sault Ste. Marie offers something for each season from events like the Bon Soo Winter Carnival to summer Rotaryfest. Overall, I see the Sault as an oyster. It can have a rough looking outer shell, but if you’re patient enough to pry it open you will find a pearl.
+
+
+THE 411
+Check out the http://sootoday.com for the happenings around the city and follow Algoma University on Facebook/ Twitter for all things Algoma 
+
+Best of Algoma University 
+Best place for a nap: 1st Floor Leather Lounge
+Best cheap lunch: The Breakfast Special (ironic, but true)
+Best hangover breakfast: The Husky or West Side Café (whichever is closer)
+Favourite campus food: Taco Salad (Warning, it sells out quick) 
+Favourite watering hole: East Enders= Top Hat, West Enders= The Rosie
+Perks of living in this town: The changing leaves in Autumn and the slopes in Winter 
+Where to live: Anywhere that isn’t James Town or in front of Essar Steel 
+Best place to study: Quiet Floor of the Arthur Wishart Library (you can hear a pin drop) 
+Coolest electives: Music in Pop culture, Film Studies 
+Most notoriously frustrating bus route: Cedar Heights because it’s had the same old man driving for the last five years and stops at the hospital for half an hour
+Best campus events: Mardi Gras and Halloween Pubs
+Best giveaway: Pretty much anything from student services (example: Donut Wednesdays) 
+Unofficial school motto: Small University, Big Education (sort of unofficial) 
+Best live music venue: Loplops 
+Weirdest tradition: Streaking on the first floor (so I’ve been told…) 
+Best spectator sports team: Soo Greyhounds Hockey (really any hockey related event) 
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Same as above (AVL Tree Modal)-->
+            <div id="newModal2" class="modal">
+                <div class="modalContent">
+                    <div class="modalHeader">
+                        <h1>AVL TREE</h1>
+                    </div>
+                    <div class=modalBody>
+                        <!--Pre Tag contains code for AVL Tree (note: code modified to be HTML friendly-->
+                        <pre>
+
+public class AVLTree &lt;T extends Comparable &lt;? super T&gt;&gt; implements BalancedTree&lt;T&gt;{
+	//The TreeNode class creates a node which makes up the body of the tree
+	//Utilized as an inner class to eliminate the need for getters and setters
+	//Height data member is utilized for checking the balance of the tree
+	private class TreeNode&lt;T&gt; {
+		T item;
+		int height;
+		TreeNode&lt;T&gt; leftChild;
+		TreeNode&lt;T&gt; rightChild;
+		
+		//A constructor for creating a node with links to children and height set to 1
+		public TreeNode(T newItem) {
+			height = 1;
+			item = newItem;
+			leftChild = null;
+			rightChild = null;
+		}
+	}
+	private TreeNode&lt;T&gt; root;
+
+	//Constructor creates an empty AVL tree
+	public AVLTree() {
+	}
+
+	//Constructor creates an AVL tree with a single node (root)
+	public AVLTree(T rootItem) {
+		root = new TreeNode(rootItem);
+	}
+	
+	//Returns true or false to whether the tree is empty
+	@Override
+	public boolean isEmpty() {
+		return root == null;
+	}
+	
+	//Method takes in an item, and adds a node containing the item to the tree
+	//Calls the helper add method to do the actual inserting
+	@Override
+	public void insert(T item) {
+		root = insert(item, root);
+	}
+	
+	//Adds the node as the root if it's empty
+	//Compares to the root to determine the side
+	//Recursively travels to the appropriate position and adds the node
+	//Checks the balance once complete and adjusts the order if the tree is out of balance
+	private TreeNode&lt;T&gt; insert(T item, TreeNode&lt;T&gt; r){
+		if(r == null){
+			return new TreeNode(item);
+		}
+		if(item.compareTo(r.item) == 0) {
+			return r;
+		}
+		if(item.compareTo(r.item) &gt; 0)  
+			r.rightChild = insert(item, r.rightChild);
+		else {
+			r.leftChild = insert(item, r.leftChild);
+		}
+		r = balanceCheck(r);
+		r.height = 1 + Math.max(((r.leftChild != null ? r.leftChild.height: 0)), (r.rightChild != null ? r.rightChild.height : 0));
+		return r;
+	} 
+	
+	//Checks the current balance of the tree following a deletion or insertion (based on node height comparison)
+	//If out of balance the method utilizes the rotate methods to balance the tree
+	private TreeNode&lt;T&gt; balanceCheck(TreeNode&lt;T&gt; r) {
+		if(Math.abs(balanceValue(r)) &gt; 1) {
+			if(((r.leftChild != null ? r.leftChild.height: 0) &lt; (r.rightChild != null ? r.rightChild.height : 0))) {
+				r = rotateLeft(r);
+				if(Math.abs(balanceValue(r))&gt;1) {
+					r = rotateRight(r);
+					r.rightChild = rotateRight(r.rightChild);
+					r = rotateLeft(r);
+				}
+			}
+			else {
+				r = rotateRight(r);
+				if(Math.abs(balanceValue(r))&gt;1) {
+					r = rotateLeft(r);
+					r.leftChild = rotateLeft(r.leftChild);
+					r = rotateRight(r);
+				}
+			}
+		}
+		return r;
+	}
+	
+	//Returns the current balance value (based on height) using the node's children 
+	private int balanceValue(TreeNode&lt;T&gt; r) {
+		return ((r.leftChild != null ? r.leftChild.height: 0) - (r.rightChild != null ? r.rightChild.height : 0));
+	}
+	
+	//Rotates a node and it's children to the left to restore balance to the tree
+	private TreeNode&lt;T&gt; rotateLeft(TreeNode&lt;T&gt; r) {
+		TreeNode&lt;T&gt; newRoot = r.rightChild;
+		TreeNode&lt;T&gt; temp = newRoot.leftChild;
+		newRoot.leftChild = r;
+		r.rightChild = temp;
+		r.height = 1 + Math.max((r.leftChild != null ? r.leftChild.height: 0), (r.rightChild != null ? r.rightChild.height : 0));
+		newRoot.height=  1 + Math.max((newRoot.leftChild != null ? newRoot.leftChild.height: 0), (newRoot.rightChild != null ? newRoot.rightChild.height : 0));
+		return newRoot; 
+	}
+	
+	//Rotates a node and it's children to the right to restore balance to the tree
+	private TreeNode&lt;T&gt; rotateRight(TreeNode&lt;T&gt; r) {
+		TreeNode&lt;T&gt; newRoot = r.leftChild;
+		TreeNode&lt;T&gt; temp = newRoot.rightChild;
+		newRoot.rightChild = r;
+		r.leftChild = temp;
+		r.height = 1 + Math.max((r.leftChild != null ? r.leftChild.height: 0), (r.rightChild != null ? r.rightChild.height : 0));
+		newRoot.height=  1 + Math.max((newRoot.leftChild != null ? newRoot.leftChild.height: 0), (newRoot.rightChild != null ? newRoot.rightChild.height : 0));
+		return newRoot; 
+	}
+	
+	//Method takes in an item, and removes the nodes containing the item from the tree
+	//Calls the helper delete method to do the actual deleting (4 other methods)
+	@Override
+	public void delete(T item) {
+		root = delete(item, root); 
+	}
+	
+	//Throws an exception if the item doesn't exist in the tree
+	//Calls the delete node method to determine the case and delete the node
+	//Checks the balance once complete and adjusts if the tree is out of balance
+	private TreeNode&lt;T&gt; delete(T item, TreeNode&lt;T&gt; r) throws RuntimeException{
+		if(r == null) {
+			throw new RuntimeException("Does not exist to delete!");
+		} 
+		if(r.item.compareTo(item) == 0) {
+			r = deleteNode(r);
+		}
+		else if(r.item.compareTo(item) &gt; 0) { 
+			r.leftChild = delete(item, r.leftChild);
+		}
+		else {
+			r.rightChild = delete(item, r.rightChild);
+		}
+		if(r != null) {
+			r = balanceCheck(r);
+			r.height = 1 + Math.max(((r.leftChild != null ? r.leftChild.height: 0)), (r.rightChild != null ? r.rightChild.height : 0));
+		}
+		return r;
+	}
+	
+	//The method checks the cases for deleting the node
+	private TreeNode&lt;T&gt; deleteNode(TreeNode&lt;T&gt; r) {
+		T replacementItem;
+		//Tests if the node is a leaf
+		if(isLeaf(r.item)) {
+			return null;
+		}
+		//test for no left child
+		else if(r.leftChild == null) {
+			return r.rightChild;
+		}
+		//tests for no right child
+		else if(r.rightChild == null) {
+			return r.leftChild;
+		}
+		else {
+			//case if there are two children
+			//retrieve and delete the inorder successor
+			replacementItem = findLeftMost(r.rightChild);
+			r.item = replacementItem;
+			r.rightChild = deleteLeftMost(r.rightChild);
+			return r;
+		}
+	}
+	
+	//Method is utilized for the two children deletion case
+	//The method finds the left most node of the right child for the replacement item
+	private T findLeftMost(TreeNode&lt;T&gt; r) {
+		if(r.leftChild == null) {
+			return r.item;
+		} 
+		else {
+			return findLeftMost(r.leftChild);
+		}
+	}
+	
+	//Method is utilized for the two children deletion case
+	//The method deletes the left most node 
+	private TreeNode &lt;T&gt; deleteLeftMost(TreeNode&lt;T&gt; r) {
+		if(r.leftChild == null) {
+			return r.rightChild;
+		}
+		else {
+			r.leftChild = deleteLeftMost(r.leftChild);
+			return r;
+		}
+	}
+	
+	//Method takes in an item, and then determines if it's in the tree
+	//Calls the helper contains method to do the actual searching
+	@Override
+	public boolean contains(T item) {
+		return contains(item, root);
+	}
+	
+	//Returns false if the tree is empty or the root is null
+	//Recursively travels through the tree until it finds the item or doesn't
+	private boolean contains(T item, TreeNode&lt;T&gt; r) {
+		if(isEmpty() || r == null) {
+			return false;
+		}
+		if(r.item.compareTo(item) == 0) {
+			return true;
+		}
+		else if((item).compareTo(r.item) &lt; 0) {
+			return contains(item, r.leftChild);
+		}
+		return contains(item, r.rightChild);
+	}
+	
+	//Method takes in an item, and then determines if it's a leaf
+	//Calls the helper isLeaf method to do the actual checking
+	public boolean isLeaf(T item) {
+		return isLeaf(item, root);
+	}
+	
+	//Returns false if the tree is empty or the root is null
+	//Recursively travels through the tree until it finds the item or doesn't
+	//Checks if it has children, and if it doesn't it returns true
+	private boolean isLeaf(T item, TreeNode&lt;T&gt; r) {
+		if(isEmpty() || r == null) {
+			return false;
+		}
+		if(r.item.compareTo(item) == 0 &amp;&amp; (r.leftChild == null &amp;&amp; r.rightChild == null)) {
+			return true;
+		}
+		if((item).compareTo(r.item) &lt; 0) {
+			return isLeaf(item, r.leftChild);
+		}
+		return isLeaf(item, r.rightChild);
+	}
+
+	//Method determines whether the string is full
+	//Passes to helper method to do the actual determining
+	@Override
+	public boolean isFullTree() {
+		return isFullTree(root);
+	}
+
+	//Method checks the case for whether it's a full tree
+	//Is full if it's empty, or the the height of the lowest children is the same
+	private boolean isFullTree(TreeNode&lt;T&gt; r) {
+		if(r == null) {
+			return true;
+		}
+		if(r.rightChild == null &amp;&amp; r.leftChild == null) {
+			return true;
+		}
+		else if ((r.leftChild != null &amp;&amp; r.rightChild != null)) {
+			return isFullTree(r.leftChild) &amp;&amp; isFullTree(r.rightChild);
+		}
+		return false;
+	}
+	
+	//Method determines whether the tree is balanced
+	//Passes to helper method to do the actual determining
+	@Override
+	public boolean isBalancedTree() {
+		return isBalancedTree(root);
+	}
+	
+	//Method checks to see if the cases are met for a balanced tree
+	//Is empty, maxheight equals the minheight, maxheight less 1 equals the minheight are the case for balanced
+	private boolean isBalancedTree(TreeNode&lt;T&gt; r) {
+		if(isEmpty() || (root.rightChild == null &amp;&amp; root.leftChild == null)) { 
+			return true;                 
+		}
+		if(r.leftChild != null &amp;&amp; r.rightChild != null) {
+			if(maxHeight(r.leftChild) - maxHeight(r.rightChild) == 1 || maxHeight(r.leftChild) - maxHeight(r.rightChild) == -1 
+					|| maxHeight(r.leftChild) - maxHeight(r.rightChild) == 0) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	//Counts the number of nodes within the tree
+	//Calls the count helper method and returns the resulting int
+	@Override
+	public int nodeCount() {
+		int count = nodeCount(root);
+		return count;
+	}
+	
+	//If the tree is empty return 0, else recursively travel through all the nodes
+	//Each travel adds one to the count
+	private int nodeCount(TreeNode &lt;T&gt; r) {
+		if(r == null) {
+			return 0;
+		}
+		return nodeCount(r.leftChild) + nodeCount(r.rightChild) + 1;
+	}
+	
+	//Method calculates the height of the tree
+	//Utilizes the helper method to do the actual comparison and calculating
+	@Override
+	public int treeHeight() {
+		int max = maxHeight(root);
+		return max;
+	}
+	
+	//Method travels through to two children at every level and returns the greater of the two
+	private int maxHeight(TreeNode&lt;T&gt; r) { 
+		if(r == null) {
+			return 0;
+		}
+		return ((maxHeight(r.leftChild) &gt;= maxHeight(r.rightChild) ? maxHeight(r.leftChild) + 1: maxHeight(r.rightChild) + 1));
+	}
+	
+	//Methods travels through the tree inorder and prints out the items
+	//Utilizes the helper method to do the actual traveling
+	public void printInOrder() {
+		printInOrder(root);
+	}
+	
+	//Travels through the tree inorder and prints each node's item
+	private void printInOrder(TreeNode &lt;T&gt; r) {
+		if(r == null) {
+			return;
+		}
+		printInOrder(r.leftChild);  
+		System.out.print("[" + r.item + "]"); 
+		printInOrder(r.rightChild); 
+	}
+	
+	//Methods travels through the tree in preorder and prints out the items
+	//Utilizes the helper method to do the actual traveling
+	public void printPreOrder() {
+		printPreOrder(root);
+	}
+	
+	//Travels through the tree in preorder and prints each node's item
+	private void printPreOrder(TreeNode&lt;T&gt; r) {
+		if(r == null) {  
+			return;
+		} 
+		System.out.print("[" + r.item + "]"); 
+		printPreOrder(r.leftChild);  
+		printPreOrder(r.rightChild);  
+	}
+}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Same as above (Has Table Modal)-->
+            <div id="newModal3" class="modal">
+                <div class="modalContent">
+                    <div class="modalHeader">
+                        <h1>HASH TABLE</h1>
+                    </div>
+                    <div class=modalBody>
+                        <!--Pre Tag contains code for Hash Map (note: code modified to be HTML friendly-->
+                        <pre>
+
+public class Hashmap {
+	
+	private Employee item;
+	private int mode;
+	private int MAX_VALUE = 401;
+	private Employee [] table;
+	private int size;
+	
+	//Constructor for hashmap that allows a mode to be selected
+	//Throws exception if an invalid mode is selected
+	public Hashmap (int mode) throws RuntimeException{
+		if(mode &lt; 0 || mode &gt; 2) {
+			throw new RuntimeException("Invalid mode (0 - 2)!");
+		}
+		table = new Employee [MAX_VALUE];
+		this.mode = mode;
+		size = 0;
+	}
+	
+	//Constructor for hashmap that allows a mode to be selected and a size 
+	//Throws exception if an invalid mode is selected
+	public Hashmap (int size, int mode) throws RuntimeException{
+		if(mode &lt; 0 || mode &gt; 2) {
+			throw new RuntimeException("Invalid mode (0 - 2)!");
+		}
+		table = new Employee [size];
+		this.mode = mode;
+		size = 0;
+	}
+	
+	//Inserts a value to a specific spot in the map based on the hashed employee ID
+	//Handles collisions based on the mode selected during construction
+	//If the map is full then throws an exception
+	public void insert (Employee item) throws RuntimeException{
+		if(size == MAX_VALUE) {
+			throw new RuntimeException("The map is full!");
+		}
+		int ID = item.getID();
+		int key = hKey(ID);
+		
+		//Uses linear probing to handle collisions based on the insert
+		//Progresses until it finds a valid location (deleted or empty)
+		if(mode == 0) {
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key &gt;= table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key] == null || table[key].getID() == 999) {
+					table[key] = item;
+					size++;
+					return;
+				}
+				key++;
+			}
+		}
+		
+		//Uses quadratic probing to handle collisions based on the insert
+		//Progresses until it finds a valid location (deleted or empty)
+		else if (mode == 1) {
+			int quadratic = 1;
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key &gt;= table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key] == null || table[key].getID() == 999) {
+					table[key] = item;
+					size++;
+					return;
+				}
+				key = key + (int) Math.pow(quadratic, 2);
+				quadratic++;
+			}
+		}
+		
+		//Uses double hashing to handle collisions based on the insert
+		//Progresses until it finds a valid location (deleted or empty)
+		else {
+			if(table[key] == null) {
+				table[key] = item;
+				size++;
+				return;
+			}
+			int key2 = ID % 97;
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key &gt;= table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key] == null || table[key].getID() == 999) {
+					table[key] = item;
+					size++;
+					return;
+				}
+				key = key + key2;
+			}
+		}
+	}
+	
+	//Deletes a value from a specific spot in the map based on the hashed employee ID
+	//User enters an ID number which is hashed and then compared with the hashed ID in the map
+	public void delete (int item) {
+		int key = hKey(item);
+		
+		//Uses linear probing to see where the item ended up after collisions
+		//Progresses until it finds the item
+		//Sets the deleted item to a blank employee with 999 as the ID
+		if(mode == 0) {
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key == table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key].getID() == item) {
+					table[key] = new Employee(999, null, null, null, 0);
+					size--;
+					return;
+				}
+				key++;
+			}
+		}
+		
+		//Uses quadratic probing to see where the item ended up after collisions
+		//Progresses until it finds the item
+		//Sets the deleted item to a blank employee with 999 as the ID
+		else if (mode == 1) {
+			int quadratic = 1;
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key &gt;= table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key].getID() == item) {
+					table[key] = new Employee(999, null, null, null, 0);;
+					size--;
+					return;
+				}
+				key = key + (int) Math.pow(quadratic, 2);
+				quadratic++;
+			}
+		}
+		
+		//Uses double hashing to see where the item ended up after collisions
+		//Progresses until it finds the item
+		//Sets the deleted item to a blank employee with 999 as the ID
+		else {
+			if(table[key] == null) {
+				table[key] = new Employee(999, null, null, null, 0);;
+				size--;
+				return;
+			}
+			int key2 = item % 97;
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key &gt;= table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key].getID() == item) {
+					table[key] = new Employee(999, null, null, null, 0);
+					size--;
+					return;
+				}
+				key = key + key2;
+			}
+		}
+	}
+	
+	//Gets the employee information from a specific spot in the map based on the hashed employee ID
+	//User enters an ID number which is hashed and then compared with the hashed ID in the map
+	public Employee get (int item) {
+		int key = hKey(item);
+		
+		//Uses linear probing to see where the item ended up after collisions
+		//Progresses until it finds the item
+		if(mode == 0) {
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key == table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key].getID() == item) {
+					return table[key];
+				}
+				key++;
+			}
+		}
+		
+		//Uses quadratic probing to see where the item ended up after collisions
+		//Progresses until it finds the item
+		else if (mode == 1) {
+			int quadratic = 1;
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key &gt;= table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key].getID() == item) {
+					return table[key];
+				}
+				key = key + (int) Math.pow(quadratic, 2);
+				quadratic++;
+			}
+		}
+		
+		//Uses double hashing to see where the item ended up after collisions
+		//Progresses until it finds the item
+		else {
+			int key2 = item % 97;
+			while(true) {
+				//Goes to the start of the map if we've hit the end
+				if(key &gt;= table.length - 1) {
+					key = key % MAX_VALUE;
+				}
+				if(table[key].getID() == item) {
+					return table[key];
+				}
+				key = key + key2;
+			}
+		}
+	}
+	
+	//Hashes the entered ID by doing a modulus with the size of the array
+	private int hKey(int temp) {
+		int k = temp % MAX_VALUE;
+		return k;
+	}
+	
+	//Prints out the employees from the hash map
+	//Only displays deleted and filled spots
+	public void print() {
+		for(int i = 0; i &lt; table.length; i++) {
+			if(table[i] != null) {
+				System.out.println(i + ": " + table[i] + ", ");
+			}
+		}
+	}
+}
+                        
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Same as above (Threading Modal)-->
+            <div id="newModal4" class="modal">
+                <div class="modalContent">
+                    <div class="modalHeader">
+                        <h1>THREADING</h1>
+                    </div>
+                    <div class=modalBody>
+                         <!--Pre Tag Threading Code (note: code modified to be HTML friendly-->
+                        <pre>
+
+public class Threading {
+	public static void main(String[] args) throws InterruptedException {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the size of the list: ");
+		int number = input.nextInt();
+		int array [] = new int[number];
+		
+		System.out.print("Enter the values: ");
+		for(int i = 0; i &lt; array.length;i++) {
+			array[i] = input.nextInt();
+		}
+		
+		//The user generated list is split into two seperate lists
+		int arraySub1 [] = Arrays.copyOfRange(array, 0, array.length / 2);
+		int arraySub2 [] = Arrays.copyOfRange(array, (array.length / 2), array.length);
+		
+		//Half one is sorted 
+		Thread t1 = new Thread(new Runnable() {
+			public void run() {
+				sort(arraySub1);
+				System.out.println("Sub List One: " + Arrays.toString(arraySub1));
+			}
+		});
+		
+		//Half two is sorted
+		Thread t2 = new Thread(new Runnable() {
+			public void run() {
+				sort(arraySub2);
+				System.out.println("Sub List Two: " + Arrays.toString(arraySub2));
+			}
+		});
+		
+		//Both halfs are merged and sorted 
+		Thread t3 = new Thread(new Runnable() {
+			public void run() {
+				merge(array, arraySub1, arraySub2);
+				System.out.println("\nCompleted List Merged: " + Arrays.toString(array));
+				Arrays.sort(array);
+				System.out.println("Completed List Sorted: " + Arrays.toString(array));
+			}
+		});
+		
+		//Thread one and two start, and thread three waits for them to finish
+		t1.start();
+		t2.start();
+		t1.join();
+		t2.join();
+		t3.start();
+	}
+	
+	//Method sorts the inputed values 
+	public static void sort(int array[]) {
+		Arrays.sort(array);
+	}
+	
+	//Method merges the two lists and sorts the final one
+	public static void merge(int original[], int array1[], int array2[]) {
+		for(int i = 0; i &lt; array1.length; i++) {
+			original[i] = array1[i];
+		}
+		
+		int number = 0;
+		for(int i = original.length / 2; i &lt; original.length; i++) {
+			original[i] = array2[number++];
+		}
+	}
+}
+                        
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Right section holds the social media links and twitter feed-->
+        <section class="adjust" id="div">
+             <div id="aside1">
+               
+               <!--Div holds the social media links (picture icons)-->
+               <div id="socialMedia">
+                    <a href="https://www.facebook.com/Tasswon" target="_blank">
+                        <img alt="Facebook" src="img/facebook.png" width="85" height="85">
+                    </a>
+                    <a href="https://www.instagram.com/tasswon/" target="_blank">
+                        <img alt="Instagram" src="img/instagram.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://plus.google.com/u/0/115011875366686783417" target="_blank">
+                        <img alt="Google+" src="img/google.png" width="85" height="85"> 
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCz3eYHK84Izwr7LmBW_9aHQ"  target="_blank">
+                        <img alt="Youtube" src="img/youtube.png" width="85" height="85"> 
+                    </a> 
+                </div>
+                 
+                <!--Div holds the twitter feed-->
+                <div id="twitter">
+                    <a class="twitter-timeline" href="https://twitter.com/Tasswon">Tweets by Tasswon</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!--Footer is at the bottom of the page and has the copyright and an updating current date (divs seperated using flexbox)-->
+    <footer class="flex-item" id="footer">
+        <div class="text"> 
+            Joseph Tassone &copy 2016
+        </div>
+        <div class="text" id="date"> Placeholder </div>
+    </footer>
+    
+    <!--A specialized widget which is linked directly to twitter (built on their end)-->
+    <script 
+        async src="https://platform.twitter.com/widgets.js">
+    </script>
+    
+    <!--Updates the content of the "date" id div in the footer to hold the current date-->
+    <script>
+        document.getElementById("date").innerHTML = Date();           
+    </script>
+    
+    <!--Code to show the modals-->
+    <script>
+        
+        //Variables used to reveal and hide the modals
+        var modal1 = document.getElementById('newModal1');
+        var modal2 = document.getElementById('newModal2');
+        var modal3 = document.getElementById('newModal3');
+        var modal4 = document.getElementById('newModal4');
+        var img1 = document.getElementById("click1");
+        var img2 = document.getElementById("click2");
+        var img3 = document.getElementById("click3");
+        var img4 = document.getElementById("click4");
+        
+        //Onclick the modal is display
+        img1.onclick = function() {
+            modal1.style.display = "block";
+        }
+        
+        //When the same modal is clicked it disappears
+        modal1.onclick = function() {
+            modal1.style.display = "none";
+        }
+        
+        //Onclick the modal is display
+        img2.onclick = function() {
+            modal2.style.display = "block";
+        }
+        
+        //When the same modal is clicked it disappears
+        modal2.onclick = function() {
+            modal2.style.display = "none";
+        }
+        
+        //Onclick the modal is display
+        img3.onclick = function() {
+            modal3.style.display = "block";
+        }
+
+        //When the same modal is clicked it disappears
+        modal3.onclick = function() {
+            modal3.style.display = "none";
+        }
+        
+        //Onclick the modal is display
+        img4.onclick = function() {
+            modal4.style.display = "block";
+        }
+        
+        //When the same modal is clicked it disappears
+        modal4.onclick = function() {
+            modal4.style.display = "none";
+        }
+    </script>
+</body>
+</html>
